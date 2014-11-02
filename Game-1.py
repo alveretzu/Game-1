@@ -80,41 +80,41 @@ while (True):
             break
     while (lugar==7):
 
-		print (vend,"Hola como estas ",nombre)
-		print (vend,"Estas en el Bar que deseas:")
-		bar=int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
-		os.system('cls')
-		if (bar==1):
-			oro-=2
-			print ("Tienes :",oro," de oro")
-			print (nombre," Compraste una Cerveza")
-			inventario[g]="Cerveza"
-			g+=1
-			continue
-		elif (bar==2):
-			oro-=3
-			print ("Tienes :",oro," de oro")
-			print (nombre," Compraste un Vino")
-			inventario[g]="Vino"
-			g+=1
-			continue
-		elif (bar==3):
-			oro-=4
-			print ("Tienes :",oro," de oro")
-			print (nombre," Compraste una Botella de Vodca")
-			inventario[g]="Vodca"
-			g+=1
-			continue
-		elif (bar==4):
-			oro-=5
-			print ("Tienes :",oro," de oro")
-			print (nombre," Compraste una Botella de Whisky")
-			inventario[g]="Whisky"
-			g+=1
-			continue
-		else:
-			print ("No posemos esa mercancia")
-			break
+        print (vend,"Hola como estas ",nombre)
+        print (vend,"Estas en el Bar que deseas:")
+        bar=int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
+        os.system('cls')
+        if (bar==1):
+            oro-=2
+            print ("Tienes :",oro," de oro")
+            print (nombre," Compraste una Cerveza")
+            inventario[g]="Cerveza"
+            g+=1
+            continue
+        elif (bar==2):
+            oro-=3
+            print ("Tienes :",oro," de oro")
+            print (nombre," Compraste un Vino")
+            inventario[g]="Vino"
+            g+=1
+            continue
+        elif (bar==3):
+            oro-=4
+            print ("Tienes :",oro," de oro")
+            print (nombre," Compraste una Botella de Vodca")
+            inventario[g]="Vodca"
+            g+=1
+            continue
+        elif (bar==4):
+            oro-=5
+            print ("Tienes :",oro," de oro")
+            print (nombre," Compraste una Botella de Whisky")
+            inventario[g]="Whisky"
+            g+=1
+            continue
+        else:
+            print ("No posemos esa mercancia")
+            break
     while (lugar == 7):
         print(vend, "Hola como estas ", nombre)
         print(vend, "Estas en el Bar que deseas:")
