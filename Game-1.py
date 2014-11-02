@@ -98,6 +98,7 @@ while (True):
             ebrio += 10
             print ("Tienes :",oro," de oro")
             print (nombre," Compraste un Vino")
+            print ("esto es una modificacion")
             print ("bebiendo...")
             print (ebrio,"%")
 
