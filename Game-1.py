@@ -256,23 +256,26 @@ while (True):
             break
     while (lugar == 3):
         print("hola que desea?")
-        print("1 - rest. vida 30 (valor $45) ---- 2 rest. vida 20 (valor $30) ---- 3 rest. vida 10 (valor $15)", end=" ")
+        print("1 - +30 vida (valor $45) ---- 2 - +20 vida (valor $30)\n ---- 3 - +10 vida (valor $15)", end=" ")
         hosp = int(input(""))
-
+        os.system('cls')
         if hosp == 1 and Vida < Vidamax-30 and oro >= 45:
             Vida += 30
             oro-=45
             print("Se restauraron 30 de vida")
+            print("Tienes ",oro," de oro restante")
 
         elif hosp == 2 and Vida < Vidamax-20 and oro >= 30:
 
             Vida += 20
             oro-=30
             print("Se restauraron 20 de vida")
+            print("Tienes ",oro," de oro restante")
 
         elif hosp == 1 and Vida < Vidamax-10 and oro >= 15:
             Vida += 10
             oro-=15
             print("Se restauraron 10 de vida")
+            print("Tienes ",oro," de oro restante")
         else:
             print("Tienes la vida al maximo")
