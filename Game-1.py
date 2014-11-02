@@ -240,6 +240,7 @@ while (True):
             break
     while (lugar == 3):
         print("hola que desea?")
+        print ("Buenosdias que desea")
         print("1 - +30 vida (valor $45) ---- 2 - +20 vida (valor $30)\n ---- 3 - +10 vida (valor $15)", end=" ")
         hosp = int(input(""))
         os.system('cls')
