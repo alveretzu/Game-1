@@ -1,6 +1,6 @@
 import os
 def muerte(lol):
-	lol=" No tienes dinero "
+	lol=" No tienes dinero modificacion de prueba"
 	print "Lo siento",lol,nombre
 Vida=50
 Mana=60
