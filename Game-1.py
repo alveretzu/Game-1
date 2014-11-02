@@ -33,15 +33,10 @@ print ("""
 """)
 nombre= input("Como te llamas?")
 while (True):
-<<<<<<< HEAD
+
 	print ("Estas en :",ciudad)
 	lugar=int(input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario 7-Ir al Bar"))
-=======
 
-	print ("Estas en :",ciudad)
-	lugar=input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario 7-Ir al Bar")
-
->>>>>>> origin/master
 	os.system('cls')
 	while (lugar==1):
 
