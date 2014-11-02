@@ -1,6 +1,6 @@
 import os
 def muerte(lol):
-	lol=" No tienes dinero modificacion de prueba"
+	lol=" No tienes dinero"
 	print "Lo siento",lol,nombre
 Vida=50
 Mana=60
@@ -32,7 +32,7 @@ print """
 	---------------------------------------------------------
 	#########################################################
 """
-nombre=raw_input("Como te llamas?modificacion de prueba")
+nombre=raw_input("Como te llamas?")
 while (True):
 	print "Estas en :",ciudad
 	lugar=input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario ")
