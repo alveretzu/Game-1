@@ -35,11 +35,12 @@ print("""
 """)
 
 nombre = input("Como te llamas?")
+os.system('cls')
 while (True):
     ebrio=0
     print("Estas en :", ciudad)
-    lugar = int(input(
-        "\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario 7-Ir al Bar"))
+    print ("\nDeseas :\n\n1-Ir a la tienda\n\n2-Ir a una casa\n\n3-Ir al hospital\n\n4-Ir al restaurante\n\n5-Ir al bosque\n\n6-Ver el inventario\n\n7-Ir al Bar")
+    lugar = int(input(""))
 
     os.system('cls')
     while (lugar == 1):
@@ -79,57 +80,52 @@ while (True):
         else:
             break
     while (lugar==7):
-
-        print (vend,"Hola como estas ",nombre)
-        print (vend,"Estas en el Bar que deseas:")
-        bar=int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
+        print (vend,"Que deseas:")
+        print ("\n\n1-Cerveza Precio-2$\n\n2-Vino Precio-3$\n\n3-Vodca Precio-4$\n\n4-Whisky Precio-5$")
+        bar=int(input(""))
         os.system('cls')
-        if (bar == 1 and ebrio<100 and oro>=2):
+        if (bar == 1 and ebrio<=80 and oro>=2):
             oro-=2
             ebrio += 20
             print ("Tienes :",oro," de oro")
-            print (nombre," Compraste una Cerveza")
-            print ("bebiendo...")
+            print ("bebiendo Cerveza...")
             print (ebrio,"%")
+            print ("")
             g+=1
             continue
-        elif (bar==2 and ebrio<100 and oro>=3):
+        elif (bar==2 and ebrio<=10 and oro>=3):
             oro-=3
             ebrio += 10
             print ("Tienes :",oro," de oro")
-            print (nombre," Compraste un Vino")
-            print ("esto es una modificacion")
-            print ("bebiendo...")
+            print ("bebiendo Vino...")
             print (ebrio,"%")
-
+            print ("")
             g+=1
             continue
-        elif (bar==3 and ebrio<100 and oro>=4):
+        elif (bar==3 and ebrio<=70 and oro>=4):
             oro-=4
             ebrio += 30
             print ("Tienes :",oro," de oro")
-            print (nombre," Compraste una Botella de Vodca")
-            print ("bebiendo...")
+            print ("bebiendo Vodca...")
             print (ebrio,"%")
-
+            print ("")
             g+=1
             continue
-        elif (bar==4 and ebrio<100 and oro>=5):
+        elif (bar==4 and ebrio<=60 and oro>=5):
             oro-=5
             ebrio += 40
             print ("Tienes :",oro," de oro")
-            print (nombre," Compraste una Botella de Whisky")
-            print ("bebiendo...")
+            print ("bebiendo Vodca...")
             print (ebrio,"%")
+            print ("")
             g+=1
             continue
-        elif (ebrio>=100):
+        elif (bar==4 or bar==3 or bar==2 or bar==1 and ebrio>=90):
             print ("Estas fuera del bar porque estas borracho!!")
+            break
         else:
             print ("No posemos esa mercancia")
             break
-
-
     while (lugar == 6):
         print(nombre)
         print("Tienes :", Vida, " de vida")
@@ -205,6 +201,7 @@ while (True):
             alde = input("")
             if (alde == 1):
                 os.system('cls')
+                ipdb.set_trace()  ######### Break Point ###########
                 print("No te conosco!!")
                 print("")
                 print("")
