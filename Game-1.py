@@ -32,7 +32,7 @@ print """
 	---------------------------------------------------------
 	#########################################################
 """
-nombre=raw_input("Como te llamas?")
+nombre=raw_input("Como te llamas?modificacion de prueba")
 while (True):
 	print "Estas en :",ciudad
 	lugar=input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario ")
