@@ -1,6 +1,6 @@
 import os
 
-
+ebrio=0
 Vidamax = 50
 Vida = 50
 Mana = 60
@@ -17,26 +17,26 @@ os.system('cls')
 x = 1
 print("""
 
-	#########################################################
-	---------------------------------------------------------
-	_________________________________________________________
-	+=======================================================+
-	|                                                       |
-	|                                                       |
-	|                                                       |
-	|                    The Luis Game                      |
-	|                                                       |
-	|                                                       |
-	|                                                       |
-	+=======================================================+
-	_________________________________________________________
-	---------------------------------------------------------
-	#########################################################
+    #########################################################
+    ---------------------------------------------------------
+    _________________________________________________________
+    +=======================================================+
+    |                                                       |
+    |                                                       |
+    |                                                       |
+    |                    The Luis Game                      |
+    |                                                       |
+    |                                                       |
+    |                                                       |
+    +=======================================================+
+    _________________________________________________________
+    ---------------------------------------------------------
+    #########################################################
 """)
 
 nombre = input("Como te llamas?")
 while (True):
-
+    ebrio=0
     print("Estas en :", ciudad)
     lugar = int(input(
         "\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario 7-Ir al Bar"))
@@ -79,73 +79,56 @@ while (True):
         else:
             break
     while (lugar==7):
-
+        
         print (vend,"Hola como estas ",nombre)
         print (vend,"Estas en el Bar que deseas:")
         bar=int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
         os.system('cls')
-        if (bar==1):
+        if (bar == 1 and ebrio>=20 and oro>=2):
             oro-=2
+            ebrio += 20
             print ("Tienes :",oro," de oro")
             print (nombre," Compraste una Cerveza")
-            inventario[g]="Cerveza"
+            print ("bebiendo...")
+            print (ebrio,"%")
             g+=1
             continue
-        elif (bar==2):
+        elif (bar==2 and ebrio>=10 and oro>=3):
             oro-=3
+            ebrio += 10
             print ("Tienes :",oro," de oro")
             print (nombre," Compraste un Vino")
-            inventario[g]="Vino"
+            print ("bebiendo...")
+            print (ebrio,"%")
+            
             g+=1
             continue
-        elif (bar==3):
+        elif (bar==3 and ebrio>=30 and oro>=4):
             oro-=4
+            ebrio += 30
             print ("Tienes :",oro," de oro")
             print (nombre," Compraste una Botella de Vodca")
-            inventario[g]="Vodca"
+            print ("bebiendo...")
+            print (ebrio,"%")
+            
             g+=1
             continue
-        elif (bar==4):
+        elif (bar==4 and ebrio>=40 and oro>=5):
             oro-=5
+            ebrio += 40
             print ("Tienes :",oro," de oro")
             print (nombre," Compraste una Botella de Whisky")
-            inventario[g]="Whisky"
+            print ("bebiendo...")
+            print (ebrio,"%")
             g+=1
             continue
+        elif (ebrio>=100):
+            print ("Estas fuera del bar porque estabas borracho!!")
         else:
             print ("No posemos esa mercancia")
             break
-    while (lugar == 7):
-        print(vend, "Hola como estas ", nombre)
-        print(vend, "Estas en el Bar que deseas:")
-        bar = int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
-        if (bar == 1):
-            oro -= 2
-            print(nombre, " Compraste una Cerveza")
-            inventario[g] = "Cerveza"
-            g += 1
-            continue
-        elif (bar == 2):
-            oro -= 3
-            print(nombre, " Compraste un Vino")
-            inventario[g] = "Vino"
-            g += 1
-            continue
-        elif (bar == 3):
-            oro -= 4
-            print(nombre, " Compraste una Botella de Vodca")
-            inventario[g] = "Vodca"
-            g += 1
-            continue
-        elif (bar == 4):
-            oro -= 5
-            print(nombre, " Compraste una Botella de Whisky")
-            inventario[g] = "Whisky"
-            g += 1
-            continue
-        else:
-            print("No posemos esa mercancia")
-            break
+    
+
     while (lugar == 6):
         print(nombre)
         print("Tienes :", Vida, " de vida")
