@@ -11,7 +11,8 @@ vend="Vendedor :"
 oro=30
 
 ciudad="The Luis City"
-inventario=[None]*10
+mochila=10
+inventario=[None]*mochila
 os.system('cls')
 x=1
 print """
@@ -35,7 +36,7 @@ print """
 nombre=raw_input("Como te llamas?")
 while (True):
 	print "Estas en :",ciudad
-	lugar=input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario ")
+	lugar=input("\nDeseas : 1-Ir a la tienda 2-Ir a una casa 3-Ir al hospital 4-Ir al restaurante \n5-Ir al bosque 6-Ver el inventario 7-Ir al Bar")
 	os.system('cls')
 	while (lugar==1):
 
@@ -74,7 +75,37 @@ while (True):
 		else:
 			break
 
-	
+	while (lugar==7):
+		print (vend,"Hola como estas ",nombre)
+		print (vend,"Estas en el Bar que deseas:")
+		bar=int(input("1-Cerveza $=2, 2-Vino $=3, 3-Vodca $=4, 4-Whisky $=5"))
+		if (bar==1):
+			oro-=2
+			print (nombre," Compraste una Cerveza")
+			inventario[g]="Cerveza"
+			g+=1
+			continue
+		elif (bar==2):
+			oro-=3
+			print (nombre," Compraste un Vino")
+			inventario[g]="Vino"
+			g+=1
+			continue
+		elif (bar==3):
+			oro-=4
+			print (nombre," Compraste una Botella de Vodca")
+			inventario[g]="Vodca"
+			g+=1
+			continue
+		elif (bar==4):
+			oro-=5
+			print (nombre," Compraste una Botella de Whisky")
+			inventario[g]="Whisky"
+			g+=1
+			continue
+		else:
+			print ("No posemos esa mercancia")
+			break
 	while (lugar==6):
 		print nombre
 		print "Tienes :",Vida," de vida"
